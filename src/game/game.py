@@ -16,7 +16,7 @@ def sfx_path(name: str) -> str:
 class Game:
     def __init__(self) -> None:
         self.audio = AudioEngine()
-        self.decision1 = Optional[str] = None
+        self.decision1: Optional[str] = None
         self.decision2: Optional[str] = None
         self.decision3: Optional[str] = None
         self.decision4: Optional[str] = None
@@ -24,14 +24,12 @@ class Game:
     
     def _print_intro(self) -> None:
         print("""==========================================
-                    BETTING ECHOES — NOVELA SONORA
-                    (terminal, historia en español)
-                ==========================================
-                Controles: Presiona ENTER para avanzar.
-                En decisiones, escribe 1 o 2 y ENTER.
-
-                Aviso: Historia ficticia sobre apuestas.
-                No se guardan partidas.
+    BETTING ECHOES — NOVELA SONORA
+    (terminal, historia en español)
+==========================================
+Controles: Presiona ENTER para avanzar.
+En decisiones, escribe 1 o 2 y ENTER.
+Aviso: Historia ficticia sobre apuestas.
         """)
     
     def _play_line(self, line: Line) -> None:
