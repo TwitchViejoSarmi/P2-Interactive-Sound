@@ -9,8 +9,9 @@ class AudioEngine:
     def __init__(self) -> None:
         self._ctx = oalInit()
         self._sources = []
-        Listener.set_position((0.0,0.0,0.0))
-        Listener.set_orientation(at=(0.0,0.0,-1.0), up=(0.0,1.0,0.0))
+        self.listener = Listener()
+        self.listener.set_position((0.0,0.0,0.0))
+        self.listener.set_orientation((0.0,0.0,-1.0,0.0,1.0,0.0))
         self._lock = threading.Lock()
     
     def play(self, filepath: str, position: Vector3 = (0.0, 0.0, -1.0), gain: float = 1.0, loop: bool = False, background: bool = True):
