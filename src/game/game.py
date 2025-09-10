@@ -45,7 +45,9 @@ Aviso: Historia ficticia sobre apuestas.
     def run(self) -> None:
         try:
             self._print_intro()
-            for _, line in enumerate(LINES):
+            for idx, line in enumerate(LINES):
+                if idx == 3 or idx == 8 or idx == 19:
+                    self.audio.stop_all()
                 print(line.text)
                 self._play_line(line)
             self.decision1 = self._decision_one()
@@ -77,6 +79,7 @@ Aviso: Historia ficticia sobre apuestas.
                     self.luck += round(random.uniform(0.05, 0.1), 2)
                 else:
                     self.luck += round(random.uniform(0.0, 0.25), 2)
+                self.audio.stop_all()
                 return ans
             print("Por favor, escribe 1 o 2 y presiona ENTER.")
     
@@ -92,6 +95,7 @@ Aviso: Historia ficticia sobre apuestas.
                     self.luck += round(random.uniform(0.0, 0.25), 2)
                 else:
                     self.luck += round(random.uniform(0.05, 0.1), 2)
+                self.audio.stop_all()
                 return ans
             print("Por favor, escribe 1 o 2 y presiona ENTER.")
 
@@ -107,6 +111,7 @@ Aviso: Historia ficticia sobre apuestas.
                     self.luck += round(random.uniform(0.05, 0.1), 2)
                 else:
                     self.luck += round(random.uniform(0.0, 0.25), 2)
+                self.audio.stop_all()
                 return ans
             print("Por favor, escribe 1 o 2 y presiona ENTER.")
 
@@ -120,6 +125,7 @@ Aviso: Historia ficticia sobre apuestas.
             if ans in ("1","2"):
                 if ans == "2":
                     self.luck += round(random.uniform(0.0, 0.25), 2)
+                self.audio.stop_all()
                 return ans
             print("Por favor, escribe 1 o 2 y presiona ENTER.")
 
@@ -163,6 +169,8 @@ Aviso: Historia ficticia sobre apuestas.
         ]
         for t, (s, p) in zip(texts, sfxs):
             print(t)
+            if s == "door_far.wav" or s == "ambience_casino.wav":
+                self.audio.stop_all()
             self.audio.play(sfx_path(s), position=p, gain=0.6, loop=False, background=True)
             input()
 
@@ -195,6 +203,8 @@ Aviso: Historia ficticia sobre apuestas.
         ]
         for t, (s, p) in zip(texts, sfxs):
             print(t)
+            if s == "rain_outside.wav" or s == "ambience_casino.wav":
+                self.audio.stop_all()
             self.audio.play(sfx_path(s), position=p, gain=0.6, loop=False, background=True)
             input()
 
@@ -235,5 +245,7 @@ Aviso: Historia ficticia sobre apuestas.
         ]
         for t, (s, p) in zip(texts, sfxs):
             print(t)
+            if s == "door_far.wav" or s == "ambience_casino.wav":
+                self.audio.stop_all()
             self.audio.play(sfx_path(s), position=p, gain=0.6, loop=False, background=True)
             input()
