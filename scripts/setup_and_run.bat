@@ -16,4 +16,4 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 
 REM Run game
-python -m betting_echoes
+python -m src.game.main

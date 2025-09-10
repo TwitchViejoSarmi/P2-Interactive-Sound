@@ -6,4 +6,4 @@ if not exist ".venv" (
   py -3 -m venv .venv
 )
 call ".venv\Scripts\activate.bat"
-python -m betting_echoes
+python -m src.game.main
