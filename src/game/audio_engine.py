@@ -41,6 +41,16 @@ class AudioEngine:
         else:
             _runner()
 
+    def stop_last_source(self) -> None:
+        with self._lock:
+            if self._sources:
+                s = self._sources.pop()
+                try:
+                    s.stop()
+                    s.destroy()
+                except Exception:
+                    pass
+
     def _stop_all(self) -> None:
         with self._lock:
             for s in list(self._sources):
