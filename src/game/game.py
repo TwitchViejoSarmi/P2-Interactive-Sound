@@ -172,6 +172,7 @@ Aviso: Historia ficticia sobre apuestas.
                 self.audio.stop_all()
             self.audio.play(sfx_path(s), position=p, gain=0.6, loop=False, background=True)
             input()
+        self.audio.stop_all()
 
     def _ending_risk(self) -> None:
         texts = [
@@ -206,6 +207,7 @@ Aviso: Historia ficticia sobre apuestas.
                 self.audio.stop_all()
             self.audio.play(sfx_path(s), position=p, gain=0.6, loop=False, background=True)
             input()
+        self.audio.stop_all()
 
     def _bad_ending(self) -> None:
         texts = [
@@ -248,3 +250,4 @@ Aviso: Historia ficticia sobre apuestas.
                 self.audio.stop_all()
             self.audio.play(sfx_path(s), position=p, gain=0.6, loop=False, background=True)
             input()
+        self.audio.stop_all()

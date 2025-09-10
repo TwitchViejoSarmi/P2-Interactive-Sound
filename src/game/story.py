@@ -26,10 +26,10 @@ LINES: List[Line] = [
     Line("Miras tus fichas: apenas lo justo para una mano.", "coin_spin.wav", (0.0, -0.1, -0.3), 0.7, False),
     Line("El juego empieza. Dos cartas frente a ti.", "card_flip.wav", (-0.5, 0.0, -0.6), 0.8, False),
     Line("La mesa huele a tabaco frío y a nervios.", "crowd_murmur.wav", (0.0, 0.0, -0.7), 0.4, False),
-    Line("Recuerdas que viniste a buscar respuestas, no fortuna.", "ambience_casino.wav", (0.0, 0.0, 0.0), 0.4, False),
+    Line("Recuerdas que viniste a buscar respuestas, no fortuna.", "ambience_casino.wav", (0.0, 0.0, 0.0), 0.2, True),
     Line("El crupier pregunta si te plantas o vas con todo.", "chips_clatter.wav", (0.3, 0.0, -0.5), 0.6, False),
     Line("Sientes un golpeteo en la sien.", "heartbeat_soft.wav", (0.0, 0.3, -0.2), 0.3, False),
-    Line("Una sirena suena lejos, como recordándote el mundo afuera.", "siren_far_right.wav", (1.0, 0.0, -0.2), 0.4, False),
+    Line("Una sirena suena lejos, como recordándote el mundo afuera.", "siren_far_right.wav", (1.0, 0.0, -0.2), 0.3, False),
     Line("Tu primera decisión se acerca.", "heavy_breathe.wav", (0.0, 0.0, -0.5), 0.7, False),
 ]
 
@@ -47,7 +47,7 @@ LINES_DECISION1: Dict[str, List[Line]] = {
 LINES_DECISION2: Dict[str, List[Line]] = {
     "1": [
         Line("Confías en tu instinto, las cartas parecen hablarte.", "breathe.wav", (0,0,-0.5), 0.5, False),
-        Line("La tensión baja un poco; te concentras en ti mismo.", "ambience_casino.wav", (0,0,0), 0.4, False),
+        Line("La tensión baja un poco; te concentras en ti mismo.", "ambience_casino.wav", (0,0,0), 0.4, True),
     ],
     "2": [
         Line("Imitas el ritmo del crupier, buscando señales en su mirada.", "chips_clatter.wav", (0.3,0,-0.5), 0.6, False),
@@ -58,7 +58,7 @@ LINES_DECISION2: Dict[str, List[Line]] = {
 LINES_DECISION3: Dict[str, List[Line]] = {
     "1": [
         Line("Mantienes la calma, esperando la siguiente jugada.", "heartbeat_soft.wav", (0,0,-0.5), 0.4, False),
-        Line("El tiempo se estira; cada segundo parece un alivio.", "ambience_casino.wav", (0,0,0), 0.3, False),
+        Line("El tiempo se estira; cada segundo parece un alivio.", "ambience_casino.wav", (0,0,0), 0.3, True),
     ],
     "2": [
         Line("Subes la apuesta de golpe; la mesa reacciona con un murmullo.", "coin_spin.wav", (0.5,0,-0.5), 0.7, False),
