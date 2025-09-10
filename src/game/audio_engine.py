@@ -1,7 +1,7 @@
 import threading
 import time
 from typing import Tuple
-from openal import oalInit, oalQuit, oalOpen, Listener
+from openal import oalInit, oalQuit, oalOpen, Listener, alDistanceModel
 
 Vector3 = Tuple[float, float, float]
 
@@ -25,11 +25,8 @@ class AudioEngine:
             with self._lock:
                 self._sources.append(src)
             src.play()
-            if loop:
-                while src.get_state() == 4114:
-                    time.sleep(0.1)
-            else:
-                src.wait()
+            while src.get_state() == 4114:
+                time.sleep(0.1)
             with self._lock:
                 try:
                     self._sources.remove(src)
