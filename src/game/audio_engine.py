@@ -28,7 +28,7 @@ class AudioEngine:
             src.play()
             try:
                 while src.get_state() == 4114 and not stop_src_ev.is_set():
-                    time.sleep(0.1)
+                    time.sleep(0.01)
             finally:
                 with self._lock:
                     try:
