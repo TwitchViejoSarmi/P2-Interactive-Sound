@@ -9,6 +9,17 @@
 **Code:** English, object‑oriented Python.  
 **Audio:** OpenAL (3D positional effects for each line).
 
+## Justification
+
+**Why Python?**
+Python was chosen for its simplicity, readability, and ease of use, making it ideal for rapid prototyping and educational projects. Its extensive ecosystem of libraries allows for quick integration of audio and data handling features without complex setup.
+
+**Audio Engine:**
+The custom `audio_engine` module leverages OpenAL to provide 3D positional audio, enhancing immersion in a text-based environment. OpenAL is cross-platform and well-suited for spatial sound, and Python bindings make it accessible for students and hobbyists.
+
+**Narrative Structure:**
+The story is organized using object-oriented principles. Each line of narrative is represented as a `Line` dataclass, storing text, sound effect, position, and playback parameters. Story progression and decisions are managed with lists and dictionaries, allowing for flexible branching and easy expansion. This approach keeps the code clean, modular, and maintainable, supporting both linear and interactive storytelling.
+
 ## What this is
 
 A tiny, Zork-like _visual novel by text_ about fictional gambling. The player advances **line by line** and makes a couple of choices leading to **two distinct endings**. There is **no save system**.
