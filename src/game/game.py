@@ -25,7 +25,6 @@ class Game:
     def _print_intro(self) -> None:
         print("""==========================================
     BETTING ECHOES — NOVELA SONORA
-    (terminal, historia en español)
 ==========================================
 Controles: Presiona ENTER para avanzar.
 En decisiones, escribe 1 o 2 y ENTER.
