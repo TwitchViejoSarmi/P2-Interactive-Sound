@@ -9,6 +9,10 @@
 **Code:** English, object‑oriented Python.  
 **Audio:** OpenAL (3D positional effects for each line).
 
+## Video
+
+https://javerianacaliedu-my.sharepoint.com/:v:/g/personal/juanesbecerra04_javerianacali_edu_co/EUmawqusqexKimLWvov_tNsBWw2DIdOYBd4gNoGIGhvepg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=pdzYhZ
+
 ## Justification
 
 **Why Python?**
